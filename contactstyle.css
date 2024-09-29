@@ -1,0 +1,197 @@
+/*Body*/
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 800px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+h1 {
+    color: #fff;
+    border: 0;
+    background-image: url('colorlilac.jpg');
+    border-radius: 12px;
+    width: auto;
+    height: 50px;
+    padding: 7px;
+    text-align: center;
+}
+
+#p1 {
+    color: purple;
+    text-align: center;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+a {
+    color: #72327a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Header */
+.headercont {
+    background-image: url('colorlilac1.jpg');
+    background-size: cover;
+    border: transparent;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    overflow: inherit;
+    color: #fff;
+    padding: 0.5px 0;
+    text-align: center;
+}
+
+header .tagline {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover {
+    color: #c9c9c9;
+}
+
+#texth {
+    position: absolute;
+    color: rgb(55, 46, 58);
+    text-align: center;
+    font-size: 60px;
+}
+
+#tagline {
+    position: absolute;
+    padding-top: 90px;
+    font-size: 18px;
+}
+
+.headerb {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.headerb img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    pointer-events: none;
+}
+
+#headerimg {
+    position: absolute;
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background-image: url('colorlilac1.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h4 {
+    font-family: 'Mereinda';
+    font-size: 1.8em;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #c9c9c9;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.footer-nav {
+    padding: 1px;
+    margin-top: 0px;
+} 
+
+.footer-nav li {
+    display: block;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    
+}
+
+.footer-nav a:hover {
+   color: #c9c9c9;
+}
+
+#s {
+    padding-top: 6px;
+    height: 30px;
+}

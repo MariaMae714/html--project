@@ -1,0 +1,264 @@
+body {
+    background-image: url('colorlilac.jpg');
+    font-family: 'Merienda';
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.story-page {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 800px;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+
+/* Sticky Note Effect */
+.sticky-note {
+    background-color: #ea97f1;
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Mereinda', cursive;
+    color: #333;
+    transform: rotate(-3deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Taped Look */
+.taped {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Mereinda', cursive;
+}
+
+.taped::before, .taped::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('tape.png') no-repeat;
+    background-size: contain;
+}
+
+.taped::before {
+    top: -15px;
+    left: -10px;
+    transform: rotate(-20deg);
+}
+
+.taped::after {
+    bottom: -15px;
+    right: -10px;
+    transform: rotate(15deg);
+}
+
+.story-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    padding: 10px;
+    background-color: #f7f4ef;
+    border-left: 5px solid #6a0dad;
+}
+
+/* Artworks Section */
+#artworks {
+    text-align: center; /* Center aligns the whole section */
+    margin: 50px 0; /* Adds space around the section */
+    font-family: 'Arial', sans-serif; 
+}
+
+/* Artworks Header */
+#artworks h3 {
+    font-size: 2em; /* para kita kaayo ang header */
+    color: #6a0dad; /* my favorite purple color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Gallery Layout */
+.art-gallery {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 20px; /* Adds space between images */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* characters */
+.scrap-image {
+    width: 200px; /* Thumbnail size */
+    height: 200px;
+    object-fit: cover; /* Ensures images are cropped */
+    border: 5px solid #f0f0f0; /* Adds a clean border around images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.scrap-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifies shadow */
+}
+
+
+
+
+
+
+/* Header */
+.headercont {
+    background-image: url('colorlilac1.jpg');
+    background-size: cover;
+    border: 0;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    color: #fff;
+    padding: 0.5px 0;
+    text-align: center;
+}
+
+header .tagline {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover {
+    color: #c9c9c9;
+}
+
+#texth {
+    position: absolute;
+    color: rgb(55, 46, 58);
+    text-align: center;
+    font-size: 60px;
+}
+
+#tagline {
+    position: absolute;
+    padding-top: 90px;
+    font-size: 18px;
+}
+
+.headerb {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.headerb img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    pointer-events: none;
+}
+
+#headerimg {
+    position: absolute;
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background-image: url('colorlilac1.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h4 {
+    font-family: 'Mereinda';
+    font-size: 1.8em;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #c9c9c9;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.footer-nav {
+    padding: 1px;
+    margin-top: 0px;
+} 
+
+.footer-nav li {
+    display: block;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    
+}
+
+.footer-nav a:hover {
+   color: #c9c9c9;
+}
+
+#s {
+    padding-top: 6px;
+    height: 30px;
+}

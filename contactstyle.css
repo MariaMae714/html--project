@@ -1,0 +1,281 @@
+/*Body*/
+body {
+    font-family: 'Mereinda';
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #281c2d; */
+    background-image: url('images/B.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline;
+}
+
+.content {
+    background-color: #35063e;
+    padding: 20px;
+    margin: 20px auto;
+    margin-top: 60px;
+    box-shadow: 5px 5px 15px rgba(54, 36, 58, 0.1);
+    border-radius: 15px;
+    max-width: 950px;
+    position: relative;
+}
+
+.content h1 {
+  color: #865bac;
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-family: 'Merienda';
+  letter-spacing: 1px;
+  border-bottom: 3px solid #865bac;
+  padding-bottom: 10px;
+}
+
+#p1 {
+    color: #865bac;
+    text-align: center;
+}
+
+.icon {
+    color: #beafc2;
+    margin: 20px;
+    margin-bottom: -7px;
+    font-size: 20px;
+    text-align: justify;
+    display: block;
+    position: relative;
+}
+
+a {
+    color: #72327a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background: #3b3b54;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#me {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-color: #281c2d;
+    border-radius: 50%;
+    border-style: solid;
+    margin-right: 20px;
+}
+#name {
+    font-size: 1.5rem;
+    color: #865bac;
+}
+
+#bio {
+    margin-top: 2px;
+    color: #beafc2;
+}
+
+
+
+/* Header */
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px; 
+  height: auto;
+  margin: 20px 0 0 20px;
+  position: fixed;
+  z-index: 1000;
+}
+
+input[type="checkbox"] {
+  transform: scale(2.0);
+  margin: 5px;
+}
+
+.menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.menuToggle a {
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #35063E;
+  color: #865bac;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.menuToggle a:hover {
+  color: #beafc2;
+  transform: scale(1.1);
+}
+
+.menuToggle a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #beafc2;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.menuToggle a:hover::after {
+  transform: scaleX(1);
+}
+
+.menuToggle input {
+  display: block;
+  width: 20px;
+  height: auto;
+  position: absolute;
+  top: -4px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+.menuToggle span {
+  position: relative;
+  display: block;
+  width: 33px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+.menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+.menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #cdcdcd;
+}
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+.menuToggle input:checked ~ .menuItem {
+  transform: none;
+}
+
+.menuItem {
+  position: absolute;
+  width: 200px;
+  height: 2000px;
+  padding: 20px;
+  padding-top: 125px;
+  background: #322837;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.menuItem li {
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: 'Merienda';
+}
+
+.menu .menuToggle {
+  position: fixed;
+  right: 0;
+}
+.menu .menuToggle input {
+  right: 50px;
+}
+.menu .menuToggle span {
+  right: 50px;
+}
+.menu .menuItem {
+  right: 0;
+  margin: -100px 0 0 0;
+  transform: translate(100%, 0);
+}
+.menu .menuItem li a:hover {
+  padding-left: 5px;
+}
+
+
+/* Footer */
+footer {
+  background-color: #35063e;
+  color: #beafc2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #beafc2;
+  font-size: 25px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.info-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.infos {
+  margin-bottom: 20px;
+}
+
+.info-btn {
+  background: none;
+  border: transparent;
+  margin: 5px 3px;
+}
+
+.info-btn a {
+  text-decoration: none;
+  color: #beafc2;
+  border: 1px solid #beafc2;
+  border-radius: 9px;
+  padding: 8px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 'background' 0.4s, color 0.4s;
+}
+
+.info-btn a:hover {
+  background-color: #beafc2;
+  color: #35063e;
+}

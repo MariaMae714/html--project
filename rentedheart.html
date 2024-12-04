@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="books.css">
+    <title>Rented Heart</title>
+    <script>
+      const chapters = [
+    {
+        title: "Table of Contents",
+        text: `Chapter 1 <br> Chapter 2 <br> Chapter 3 <br> Chapter 4`
+    },
+    {
+        title: "Chapter 1",
+        text:  `mmmmm`
+    },
+    {
+        title: "Chapter 2",
+        text: "mmmm"
+    },
+    {
+        title: "Chapter 3",
+        text: `mmmmmm`
+    },
+    {
+        title: "Chapter 4",
+        text: "mmmm"
+    }
+];
+
+let currentChapter = 0;
+
+function updateChapter() {
+    const chapterTitle = document.getElementById('chapter-title');
+    const chapterText = document.getElementById('chapter-text');
+    
+    chapterTitle.textContent = chapters[currentChapter].title;
+    chapterText.innerHTML = chapters[currentChapter].text;
+    
+    document.getElementById('prev-button').disabled = currentChapter === 0;
+    document.getElementById('next-button').disabled = currentChapter === chapters.length - 1;
+}
+
+function nextChapter() {
+    if (currentChapter < chapters.length - 1) {
+        currentChapter++;
+        updateChapter();
+    }
+}
+
+function prevChapter() {
+    if (currentChapter > 0) {
+        currentChapter--;
+        updateChapter();
+    }
+}
+
+function createTableOfContents() {
+    const toc = document.getElementById('table-of-contents');
+    const select = document.createElement('select');
+    select.onchange = () => {
+        currentChapter = parseInt(select.value);
+        updateChapter();
+    };
+
+    chapters.forEach((chapter, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = chapter.title;
+        select.appendChild(option);
+    });
+
+    toc.appendChild(select);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateChapter();
+    createTableOfContents();
+});
+    </script>
+</head>
+<body>
+<header>
+    <img id="logo" src="images/logo.png" alt="Logo"><img>
+    <nav class="menu" role="navigation">
+        <div class="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul class="menuItem">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sub&feed.html">Subscribe</a></li>
+          </ul>
+        </div>
+      </nav>
+</header>
+
+<div class="page-title">
+  <a href="home.html#rented-heart" id="back">Rented Heart</a>
+</div>
+
+<div class="book-container">
+  <div class="chapter-header">
+    <h1 id="chapter-title"></h1>
+  </div>
+      <div class="chapter-content" id="chapter-text"></div>
+  <div class="navigation">
+    <button id="prev-button" onclick="prevChapter()">Previous</button>
+    <div id="table-of-contents"></div>
+    <button id="next-button" onclick="nextChapter()">Next</button>
+  </div>
+</div>
+
+</body>
+</html>

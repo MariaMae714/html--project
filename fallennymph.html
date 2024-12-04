@@ -17,7 +17,7 @@
       const chapters = [
     {
         title: "Table of Contents",
-        text: `Chapter 1 <br> Chapter 2 <br> Chapter 3 <br> Chapter 4`
+        text: ` Interaction 1 <br> Interaction 2 <br> Interaction 3 <br> Interaction 4`
     },
     {
         title: "Chapter 1: Lost and Autumn",
@@ -90,53 +90,55 @@
 
 let currentChapter = 0;
 
-function updateChapter() {
-    const chapterTitle = document.getElementById('chapter-title');
-    const chapterText = document.getElementById('chapter-text');
-    
-    chapterTitle.textContent = chapters[currentChapter].title;
-    chapterText.innerHTML = chapters[currentChapter].text;
-    
-    document.getElementById('prev-button').disabled = currentChapter === 0;
-    document.getElementById('next-button').disabled = currentChapter === chapters.length - 1;
-}
+    function updateChapter() {
+        const chapterTitle = document.getElementById('chapter-title');
+        const chapterText = document.getElementById('chapter-text');
+            
+        chapterTitle.textContent = chapters[currentChapter].title;
+        chapterText.innerHTML = chapters[currentChapter].text;
+            
+        document.getElementById('prev-button').disabled = currentChapter === 0;
+        document.getElementById('next-button').disabled = currentChapter === chapters.length - 1;
+        
+        window.scrollTo(0, 0);
+       }
 
-function nextChapter() {
-    if (currentChapter < chapters.length - 1) {
-        currentChapter++;
-        updateChapter();
+    function nextChapter() {
+        if (currentChapter < chapters.length - 1) {
+            currentChapter++;
+            updateChapter();
+        }
     }
-}
 
-function prevChapter() {
-    if (currentChapter > 0) {
-        currentChapter--;
-        updateChapter();
+    function prevChapter() {
+        if (currentChapter > 0) {
+            currentChapter--;
+            updateChapter();
+        }
     }
-}
 
-function createTableOfContents() {
-    const toc = document.getElementById('table-of-contents');
-    const select = document.createElement('select');
-    select.onchange = () => {
-        currentChapter = parseInt(select.value);
+    function createTableOfContents() {
+        const toc = document.getElementById('table-of-contents');
+        const select = document.createElement('select');
+        select.onchange = () => {
+            currentChapter = parseInt(select.value);
+            updateChapter();
+        };
+
+        chapters.forEach((chapter, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = chapter.title;
+            select.appendChild(option);
+        });
+
+        toc.appendChild(select);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
         updateChapter();
-    };
-
-    chapters.forEach((chapter, index) => {
-        const option = document.createElement('option');
-        option.value = index;
-        option.textContent = chapter.title;
-        select.appendChild(option);
+        createTableOfContents();
     });
-
-    toc.appendChild(select);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateChapter();
-    createTableOfContents();
-});
     </script>
 </head>
 <body>
